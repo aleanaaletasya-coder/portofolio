@@ -15,8 +15,19 @@ body{
   margin:0;
   background:#fbfbfa;
   color:var(--ink);
-  font-family:Manrope,Arial,sans-serif;
+  font-family:Manrope,Arial,sans-serif
+}
+main{
+  display:block;
   overflow-x:hidden
+}
+img{
+  max-width:100%;
+  height:auto
+}
+h1,h2,h3,p{
+  overflow-wrap:break-word;
+  word-break:break-word
 }
 .cursor-glow{
   position:fixed;
@@ -639,6 +650,7 @@ footer>div:first-child p{
     background:var(--ink)
   }
   .hero{
+    min-height:auto;
     grid-template-columns:1fr;
     padding:75px 0 45px;
     gap:15px
@@ -710,10 +722,11 @@ footer>div:first-child p{
     right:0
   }
   .availability-card{
-    right:-30px
+    right:-10px;
+    width:160px
   }
   .experience-card{
-    left:-18px
+    left:-10px
   }
   .project-modal{padding:16px}
   .project-modal__content{grid-template-columns:1fr;max-height:calc(100vh - 32px)}
@@ -739,6 +752,60 @@ footer>div:first-child p{
   }
   .intro{
     font-size:14px
+  }
+  .availability-card{
+    right:-6px;
+    width:150px
+  }
+  .experience-card{
+    left:-6px;
+    width:135px
+  }
+}
+@media(max-width:380px){
+  .navbar,.hero,.section{
+    width:calc(100% - 28px)
+  }
+  .hero h1{
+    font-size:34px
+  }
+  .hero-visual{
+    height:360px
+  }
+  .photo-wrap{
+    transform:scale(.6)
+  }
+  .availability-card{
+    right:-2px;
+    width:135px;
+    padding:9px
+  }
+  .experience-card{
+    left:-2px;
+    width:118px;
+    padding:11px
+  }
+  .experience-card strong{
+    font-size:22px
+  }
+  .hero-actions{
+    flex-wrap:wrap;
+    gap:12px
+  }
+  .footer-cta{
+    font-size:clamp(32px,9vw,48px)
+  }
+  .about h2,.work h2{
+    font-size:clamp(30px,8vw,44px)
+  }
+  .service-grid p{
+    max-width:100%
+  }
+  .floating-tulip{
+    font-size:26px !important
+  }
+  .sparkle{
+    font-size:13px !important
   }
 }
   .project-modal__image{
